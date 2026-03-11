@@ -26,7 +26,7 @@ const Login = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/login', formData);
+      const response = await axios.post('/api/login', formData);
       alert('Login successful! Welcome back, ' + response.data.user.fullName);
       navigate('/');
     } catch (err) {
